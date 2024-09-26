@@ -2,7 +2,7 @@
 
 Welcome to the guide on deploying your own Streamlit web app using Azure's Container Registry and Web App services! This step-by-step manual will walk you through the process of creating and pushing a Dockerized Streamlit app to Azure and deploying it using Azure Web Apps. Let's get started! 🎉
 
-![image](./main.png)
+![image](main.png)
 
 ---
 
