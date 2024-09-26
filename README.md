@@ -9,31 +9,30 @@ Welcome to the guide on deploying your own Streamlit web app using Azure's Conta
 <details>
   <summary>Part 1 - Introduction to Deploy Streamlit App to Azure</summary>
 
-  [Watch Video](https://youtu.be/r4BLx5mOwKE)
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/r4BLx5mOwKE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 </details>
 
 <details>
   <summary>Part 2 - Stand Up Instance on Azure Container Registry</summary>
 
-  [Watch Video](https://youtu.be/XH6mtK7MXgE)
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/XH6mtK7MXgE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 </details>
 
 <details>
   <summary>Part 3 - Deploy Docker Image to Azure Container Registry</summary>
 
-  [Watch Video](https://youtu.be/b2FlbvGEjok)
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/b2FlbvGEjok" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 </details>
 
 <details>
   <summary>Part 4 - Deploy Web App Backed By Azure Container Registry</summary>
 
-  [Watch Video](https://youtu.be/D1qzq1qnHig)
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/D1qzq1qnHig" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 </details>
-
 
 
 ## Prerequisites 🛠️
