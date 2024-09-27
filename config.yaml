@@ -1,0 +1,23 @@
+cookie:
+  expiry_days: 30
+  key: some_signature_key
+  name: app_auth_cookie
+
+credentials:
+  usernames:
+    eagle0504:
+      email: eagle0504@gmail.com
+      name: Yiqiao
+      password: $2b$12$xTz9hrdI3QbE7IwPMrCYGeqKNYrkJeQ/dz22278xLyMIzb2SZj4Im
+    jsmith:
+      email: jsmith@gmail.com
+      name: John Smith
+      password: $2b$12$y7OJocq.1O9.wk08Qj9qT.aHiatbIzn.8RKs9Yw2Aac/baNtkcqeu
+    rbriggs:
+      email: rbriggs@gmail.com
+      name: Rebecca Briggs
+      password: $2b$12$d6VtLvzfiMv7HBIF2kDhMeeyiyG/LQIUBhZA7e70zKsA/l5bVpQjK
+
+preauthorized:
+  emails:
+  - melsby@gmail.com
