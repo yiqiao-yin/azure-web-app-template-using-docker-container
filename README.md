@@ -34,6 +34,13 @@ Welcome to the guide on deploying your own Streamlit web app using Azure's Conta
 
 </details>
 
+<details>
+  <summary>Part 5 - Add User Authentication to Deployed Web App on Azure</summary>
+
+  [![Watch the video](https://img.youtube.com/vi/bXf4oxNYbgw/0.jpg)](https://www.youtube.com/watch?v=bXf4oxNYbgw)
+
+</details>
+
 
 ## Prerequisites 🛠️
 
