@@ -2,7 +2,7 @@
 
 Welcome to the guide on deploying your own Streamlit web app using Azure's Container Registry and Web App services! This step-by-step manual will walk you through the process of creating and pushing a Dockerized Streamlit app to Azure and deploying it using Azure Web Apps. Let's get started! 🎉
 
-![image](main.png)
+![image](./docs/main.png)
 
 ---
 
@@ -38,6 +38,13 @@ Welcome to the guide on deploying your own Streamlit web app using Azure's Conta
   <summary>Part 5 - Add User Authentication to Deployed Web App on Azure</summary>
 
   [![Watch the video](https://img.youtube.com/vi/bXf4oxNYbgw/0.jpg)](https://www.youtube.com/watch?v=bXf4oxNYbgw)
+
+</details>
+
+<details>
+  <summary>Part 6 - Release ChatBot After User Authentication</summary>
+
+  [![Watch the video](https://img.youtube.com/vi/bWLYvgdUqFo/0.jpg)](https://www.youtube.com/watch?v=bWLYvgdUqFo)
 
 </details>
 

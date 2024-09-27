@@ -1,3 +1,5 @@
+openai
 streamlit
 streamlit-authenticator
+python-dotenv
 pyyaml
