@@ -6,6 +6,8 @@ Welcome to the guide on deploying your own Streamlit web app using Azure's Conta
 
 ---
 
+Please use the drop down buttons below to watch tutorials for each part.
+
 <details>
   <summary>Part 1 - Introduction to Deploy Streamlit App to Azure</summary>
 
