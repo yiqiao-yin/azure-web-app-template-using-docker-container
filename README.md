@@ -50,6 +50,13 @@ Please use the drop down buttons below to watch tutorials for each part.
 
 </details>
 
+<details>
+  <summary>Part 7 - A Python Coding Agent Built-in ChatBot</summary>
+
+  [![Watch the video](https://img.youtube.com/vi/lBuIz-nuEfE/0.jpg)](https://www.youtube.com/watch?v=lBuIz-nuEfE)
+
+</details>
+
 
 ## Prerequisites 🛠️
 

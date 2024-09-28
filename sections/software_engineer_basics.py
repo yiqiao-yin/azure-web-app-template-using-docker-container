@@ -1,4 +1,6 @@
 def software_engineer_basics():
+    from datetime import datetime
+
     import streamlit as st
 
     st.write("# Welcome to Software Engineer Basics! 👋")
@@ -1295,4 +1297,13 @@ def software_engineer_basics():
 
         This markdown file provides an overview of common topics in software engineering interviews. It's important to practice and understand the underlying principles behind each topic to succeed in interviews.
         """
+    )
+
+    # Credit:
+    current_year = datetime.now().year  # This will print the current year
+    st.markdown(
+        f"""
+            <h6 style='text-align: left;'>Copyright © 2010-{current_year} Present Yiqiao Yin</h6>
+        """,
+        unsafe_allow_html=True,
     )

@@ -1,6 +1,8 @@
-def run_chatbot():
+def run_agent_py_programmer():
     import os
+    import re
     from datetime import datetime
+    from typing import Any, Optional
 
     import streamlit as st
     from dotenv import load_dotenv
@@ -16,7 +18,10 @@ def run_chatbot():
         def __init__(self):
             self.client = OpenAI(api_key=OPENAI_API_KEY)
             self.history = [
-                {"role": "system", "content": "You are a helpful assistant."}
+                {
+                    "role": "system",
+                    "content": "You are a helpful programmer especialy good for writing python code and functions. When user asks you to write py code or py functions or python functions, you always use standard format which includes type hints, docstring, and comments.",
+                }
             ]
 
         def generate_response(self, prompt: str) -> str:
@@ -34,6 +39,89 @@ def run_chatbot():
 
         def get_history(self) -> list:
             return self.history
+
+    def isolate_and_save_python_code(
+        input_string: str, file_path: str
+    ) -> Optional[str]:
+        """
+        Extracts Python code from a given input string and saves it to a file.
+
+        This function looks for a block of text that is enclosed within triple backticks (```),
+        specifically targeting blocks that start with ```python.
+
+        Args:
+            input_string (str): The input string containing the Python code block.
+            file_path (str): The path where the extracted Python code will be saved.
+
+        Returns:
+            Optional[str]: The path to the saved file if the Python code block is found and saved, else None.
+        """
+        # Define the pattern to match the Python code block
+        pattern = r"```python\s*(.*?)\s*```"
+
+        # Search for the pattern in the input string
+        match = re.search(pattern, input_string, re.DOTALL)
+
+        if match:
+            # Extract the Python code
+            python_code = match.group(1)
+
+            # Write the Python code to the specified file
+            with open(file_path, "w") as file:
+                file.write(python_code)
+
+            return file_path
+        else:
+            # Return None if no Python code block is found
+            return None
+
+    import random
+    import string
+
+    def generate_random_string(length: int = 20) -> str:
+        """
+        Generate a random string of specified length consisting of letters and digits.
+
+        :param length: The length of the random string to generate (default is 20).
+        :return: A random string of the specified length.
+        """
+        # Define the character set: digits, lowercase, and uppercase letters
+        characters = string.ascii_letters + string.digits
+        # Generate a random string by selecting from the character set
+        random_string = "".join(random.choice(characters) for _ in range(length))
+        return random_string
+
+    from datetime import datetime
+
+    def get_current_date_string() -> str:
+        """
+        Generate a string representing the current date in YYYY_MM_DD format.
+
+        :return: A string of the current date in the format 'YYYY_MM_DD'.
+        """
+        # Get the current date
+        current_date = datetime.now()
+        # Format the date as 'YYYY_MM_DD'
+        date_string = current_date.strftime("%Y_%m_%d")
+        return date_string
+
+    def create_download_button(file_path: str) -> None:
+        """
+        Create a download button for the saved Python code file.
+
+        :param file_path: The path to the Python file to be downloaded.
+        """
+        # Read the content of the saved file
+        with open(file_path, "r") as file:
+            file_content = file.read()
+
+        # Create a download button in Streamlit
+        st.download_button(
+            label="Download Python Script",
+            data=file_content,
+            file_name=file_path.split("/")[-1],  # Use the file name from the path
+            mime="text/plain",
+        )
 
     # st.set_page_config(layout="wide")
     st.title("Just chat! 🤖")
@@ -123,3 +211,15 @@ def run_chatbot():
 
         # Add assistant response to chat history
         st.session_state.messages.append({"role": "assistant", "content": response})
+
+        # Check if we need to save py script
+        if "```python" in response:
+            random_string = generate_random_string().lower()
+            date_string = get_current_date_string()
+            this_py_script_name = f"{date_string}_{random_string}.py"
+            isolate_and_save_python_code(
+                input_string=response, file_path=this_py_script_name
+            )
+
+            # Create a download button
+            create_download_button(this_py_script_name)
